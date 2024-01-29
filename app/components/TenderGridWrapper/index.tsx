@@ -1,10 +1,10 @@
-import SearchString from "GlobalComponents/SearchString"
 import { FC } from "react"
 
-import TitleCounter from "../../../../GlobalComponents/TitleCounter";
 import GridActions from "./components/GridActions"
 import TenderGrid from "./components/TenderGrid";
 import {TenderGridHeaderWrapper, TenderGridMainWrapper, TenderGridTitleSearchWrapper} from "./styled";
+import TitleCounter from "../../GlobalComponents/TitleCounter/index";
+import SearchString from "../../GlobalComponents/SearchString/index";
 
 
 const TenderGridWrapper:FC =()=>{

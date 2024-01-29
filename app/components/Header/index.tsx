@@ -1,21 +1,55 @@
+"use client"
 import {FC} from "react";
 
 import Wrapper from "../../GlobalComponents/Wrapper"
 import Logo from "./components/Logo";
-import Menu from "./components/Menu";
+
 import ProfileIcon from "./components/ProfileIcon";
 import style from "./Header.module.scss"
+import MenuLinkButton from "./components/Menu/index";
+import {useRouter} from "next/router";
+import {usePathname} from "next/navigation";
+
+const menuLinkButtonsArray = [
+    {
+        name:"Закупки",
+        link:"/",
+        routes:["/tender","/tenders","/"]
+    },
+    {
+        name:"Организации",
+        link:"/organizations",
+        routes:["/organizations"]
+    },
+    {
+        name:"Пользователи",
+        link:"/users",
+        routes:["/users"]
+    },
+    {
+        name:"Администрирование",
+        link:"/admin",
+        routes:["/admin"]
+    },
+]
 
 const Header:FC = () => {
-    return <Wrapper>
-        <div className={style.header}>
-            <div className={style.mainMenu}>
-                <Logo/>
-                <Menu/>
+    const pathname = usePathname()
+    return <div style={{backgroundColor:"#FFF"}}>
+        <Wrapper>
+            <div className={style.header}>
+                <div className={style.mainMenu}>
+                    <Logo/>
+                    {
+                        menuLinkButtonsArray.map(button => {
+                            return <MenuLinkButton name={button.name} key={button.link} active={button.routes.includes(pathname)}/>
+                        })
+                    }
+                </div>
+                <ProfileIcon/>
             </div>
-            <ProfileIcon/>
-        </div>
-    </Wrapper>
+        </Wrapper>
+    </div>
 }
 
 export default Header

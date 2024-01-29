@@ -1,7 +1,8 @@
 "use client"
 import { Tabs, TabsProps } from "antd";
 import { FC } from "react"
-import Wrapper from "GlobalComponents/Wrapper";
+import Wrapper from "../../../GlobalComponents/Wrapper/index";
+
 
 const onChange = (key: string) => {
     console.log(key);

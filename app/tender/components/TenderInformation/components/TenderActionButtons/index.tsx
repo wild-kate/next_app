@@ -1,8 +1,8 @@
 import {FC} from "react";
 
-import CustomButton from "../../../../GlobalComponents/CustomButton";
 import ActionButton from "./components/ActionButton";
 import {TenderActionButtonWrapper} from "./styled";
+import CustomButton from "../../../../../GlobalComponents/CustomButton/index";
 
 const TenderActionButtons:FC =()=>{
     return <TenderActionButtonWrapper>

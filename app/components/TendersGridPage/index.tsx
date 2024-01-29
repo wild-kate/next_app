@@ -1,8 +1,9 @@
-import Wrapper from "GlobalComponents/Wrapper";
+
 import {FC} from "react";
 
 import TenderFiltersWrapper from "./components/TenderFiltersWrapper";
 import TenderGridWrapper from "./components/TenderGridWrapper";
+import Wrapper from "../../GlobalComponents/Wrapper/index";
 
 const TenderGridPage:FC =()=>{
     return <Wrapper>

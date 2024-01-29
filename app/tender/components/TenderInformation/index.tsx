@@ -1,6 +1,6 @@
 import {FC} from "react";
 
-import Wrapper from "../../GlobalComponents/Wrapper";
+
 import BackButton from "./components/BackButton";
 import TenderActionButtons from "./components/TenderActionButtons";
 import TenderCalendar from "./components/TenderCalendar";
@@ -9,6 +9,7 @@ import TenderPriceStatus from "./components/TenderPriceStatus";
 import TenderTitle from "./components/TenderTitle";
 import {FullTenderInfoWrapper, RightInfoBLockWrapper} from "./styled";
 import style from "./tenderInformation.module.scss"
+import Wrapper from "../../../GlobalComponents/Wrapper/index";
 
 const TenderInformation:FC = () => {
     return <div className={style.tenderInformationWrapper}>

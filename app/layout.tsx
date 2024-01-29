@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import React from "react";
+import Header from "./components/Header/index";
+import {ConfigProvider} from "antd";
+import StyledComponentsRegistry from "./styledRegistry";
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +17,67 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+      <ConfigProvider theme={{
+        "components": {
+          "Tabs": {
+            "inkBarColor": "rgb(227, 6, 17)",
+            "itemActiveColor": "rgb(227, 6, 17)",
+            "itemHoverColor": "rgb(227, 6, 17)",
+            "itemSelectedColor": "rgb(227, 6, 17)",
+            "horizontalItemGutter": 40,
+            "fontSize": 16,
+            "horizontalItemPadding": "22px 0 0px 0"
+          },
+          Badge:{
+            colorBorderBg:"#E30611"
+          },
+          Button:{
+            contentFontSizeSM:12,
+            contentFontSizeLG:14,
+            paddingInlineSM:2,
+          },
+          "Checkbox": {
+            "colorPrimary": "rgb(227, 6, 17)",
+            "colorPrimaryHover": "rgb(237, 87, 94)",
+            "colorText": "rgb(86, 86, 86)"
+          },
+          "Tree": {
+            "colorPrimaryHover": "rgb(255, 98, 106)",
+            "colorPrimary": "rgb(227, 6, 17)",
+            "colorPrimaryBorder": "rgb(198, 198, 198)",
+            "colorText": "rgb(86, 86, 86)",
+            "colorBorder": "rgb(226, 226, 226)",
+            "colorTextLightSolid": "rgb(86, 86, 86)",
+            "colorBgContainerDisabled": "rgba(255, 255, 255, 0.04)",
+            "nodeSelectedBg": "rgba(0, 0, 0, 0.04)",
+            "colorBgContainer": "rgba(255, 255, 255, 0)",
+            "colorTextDisabled": "rgb(86, 86, 86)"
+          },
+          "Tooltip": {
+            "colorBgSpotlight": "rgb(0, 20, 36)",
+            "colorTextLightSolid": "rgb(253, 253, 253)"
+          },
+          "Select": {
+            "multipleItemBg": "rgb(226, 229, 235)",
+            "optionSelectedBg": "rgb(226, 229, 235)",
+            "optionSelectedColor": "rgb(86, 86, 86)",
+            "colorPrimary": "rgb(227, 6, 17)",
+            "colorIconHover": "rgb(227, 6, 17)",
+            "optionFontSize": 12,
+            "fontSize": 12,
+            "colorText": "rgb(86, 86, 86)",
+            "colorTextPlaceholder": "#C6C6C6"
+          }
+        }
+      }}>
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+      <Header/>
+      <StyledComponentsRegistry>
+      {children}
+      </StyledComponentsRegistry>
+      </body>
     </html>
+        </ConfigProvider>
   )
 }

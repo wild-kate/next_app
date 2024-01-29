@@ -1,7 +1,9 @@
+'use client'
 import {FC, useCallback, useState} from "react";
 
-import CustomButton from "../../../../../../GlobalComponents/CustomButton";
 import {LineMenuRow, MenuBackground, MenuFunctionRow, MenuRow, MenuWrapper} from "./styled";
+import CustomButton from "../../../../../../../GlobalComponents/CustomButton/index";
+
 
 const ActionButton:FC =()=>{
     const [menuVisible,setMenuVisible] = useState<boolean>(false)

@@ -1,3 +1,4 @@
+"use client"
 import {DownOutlined} from "@ant-design/icons";
 import {Tree, TreeDataNode} from "antd";
 import {FC} from "react";

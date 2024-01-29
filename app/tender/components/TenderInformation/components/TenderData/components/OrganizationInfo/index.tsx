@@ -1,8 +1,9 @@
 import {FC} from "react";
+import {DataComponentsWrapper} from "../../../../../../../GlobalComponents/styled/Wrapper";
+import {Subtitle} from "../../../../../../../GlobalComponents/styled/Title";
+import InfoRow from "../../../../../../../GlobalComponents/InfoRow/index";
 
-import InfoRow from "../../../../../../GlobalComponents/InfoRow";
-import {Subtitle} from "../../../../../../GlobalComponents/styled/Title";
-import {DataComponentsWrapper} from "../../../../../../GlobalComponents/styled/Wrapper";
+
 
 const OrganizationInfo:FC =()=>{
     return <DataComponentsWrapper>

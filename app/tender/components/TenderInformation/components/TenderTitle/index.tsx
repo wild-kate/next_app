@@ -1,8 +1,8 @@
 import {FC} from "react";
 
-import InfoRow from "../../../../GlobalComponents/InfoRow";
 import TenderProps from "./components/TenderProps";
 import style from "./TenderTitle.module.scss"
+import InfoRow from "../../../../../GlobalComponents/InfoRow/index";
 
 const TenderTitle:FC =()=>{
     return <div>

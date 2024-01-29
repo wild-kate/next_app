@@ -1,4 +1,5 @@
-import exp from "constants";
+"use client"
+
 import styled from "styled-components";
 
 export type FiltersTitle = {

@@ -1,8 +1,6 @@
 import {FC} from "react";
 
-import InfoRow from "../../../../../../../../GlobalComponents/InfoRow";
-import TenderPriceStatus from "../../../../../../../TenderInformation/components/TenderPriceStatus";
-import TenderProps from "../../../../../../../TenderInformation/components/TenderTitle/components/TenderProps";
+
 import {
     GridCardInformationWrapper, GridCardNoticeWrapper,
     GridCardNumberWrapper, GridCardPurchaseInfo, GridCardPurchaseInfoWrapper,
@@ -12,6 +10,12 @@ import {
     GridCardWrapper,
     GridNumberWrapper
 } from "./styled";
+import InfoRow from "../../../../../../GlobalComponents/InfoRow/index";
+import TenderProps
+    from "../../../../../../tender/components/TenderInformation/components/TenderTitle/components/TenderProps/index";
+import TenderPriceStatus
+    from "../../../../../../tender/components/TenderInformation/components/TenderPriceStatus/index";
+
 
 const gridCardIcon = <svg width="96" height="106" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="48" cy="48" r="48" fill="#F2F3F7"/>
