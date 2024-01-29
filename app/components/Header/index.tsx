@@ -35,7 +35,7 @@ const menuLinkButtonsArray = [
 
 const Header:FC = () => {
     const pathname = usePathname()
-    return <div style={{backgroundColor:"#FFF"}}>
+    return <div style={{backgroundColor:"#FFF", color: "#fff"}}>
         <Wrapper>
             <div className={style.header}>
                 <div className={style.mainMenu}>
